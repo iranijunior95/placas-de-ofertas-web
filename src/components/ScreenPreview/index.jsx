@@ -8,12 +8,14 @@ function ScreenPreview(props) {
 
     useEffect(() => {
         const $divDescricao = document.querySelector('.descricao');
+        const novaAltura = $divDescricao.clientHeight;
 
-        setAlturaDescricao($divDescricao.clientHeight);
-
-        console.log($divDescricao.clientHeight)
-    }, [props.descricao]);
-
+        if (novaAltura !== alturaDescricao) {
+            setAlturaDescricao(novaAltura);
+        }
+        
+    }, [props.descricao, alturaDescricao]);
+    
     return (
         <Card className="card-screen-preview">
             <Card.Body>
@@ -24,12 +26,12 @@ function ScreenPreview(props) {
                 <div className="conteudo-oferta">
                     <h2 
                         className="descricao"
-                        style={{ fontSize: alturaDescricao === 58 ? "0.9rem" : "1rem" }}
+                        //style={{ fontSize: alturaDescricao === 58 ? "0.9rem" : "1rem" }}
                     >
-                        {props.descricao}
+                        {props.descricao === "" ? "descrição da oferta" : props.descricao}
                     </h2>
 
-                    <h3 className="preco">{props.preco}</h3>
+                    <h3 className="preco">{props.preco === "" ? "0,00" : props.preco.replace(/R\$\s?/, "")}</h3>
 
                     <div 
                         className="rodape"
@@ -37,7 +39,7 @@ function ScreenPreview(props) {
                     >
                         <img src={ImgLogo} alt="Logo atacadão" className="logo" draggable="false" />
                         
-                        <p className="validade">{props.validade}</p>
+                        <p className="validade">{props.validade === "" ? "valídade da oferta" : props.validade}</p>
                     </div>
                 </div>
             </Card.Body>

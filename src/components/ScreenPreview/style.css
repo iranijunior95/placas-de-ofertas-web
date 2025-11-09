@@ -4,6 +4,7 @@
     width: 280px;
     height: 396px;
     box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    user-select: none;
 }
 
 .card-screen-preview .card-body {
