@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.card-screen-preview {
+    width: 280px;
+    height: 396px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+.card-screen-preview .card-body {
+    padding: 0;
+}
+
+.cabecalho-oferta {
+    position: relative;
+    background-color: #e03131;
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    padding: 20px 0;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+}
+
+.cabecalho-oferta > h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 3.8rem; 
+    letter-spacing: 5px; 
+    line-height: 1;          
+    text-transform: uppercase;
+    color: white;
+    position: relative;
+    margin-top: -10px;
+    transform: translateX(3px);   
+}
+
+.conteudo-oferta {
+    font-family: 'Anton', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 10px;
+}
+
+.descricao {
+    font-size: 1rem;
+    margin-top: 20px;
+    letter-spacing: 1px; 
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 100%;
+}
+
+.preco {
+    font-size: 5rem;
+    font-weight: 900;
+    margin: 0;
+    line-height: 1;
+    margin-top: 10px;
+}
+
+.rodape {
+    margin-top: 60px;
+}
+
+.logo {
+    width: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.validade {
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
