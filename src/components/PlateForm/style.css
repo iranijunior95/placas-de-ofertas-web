@@ -22,3 +22,9 @@ form label {
     display: flex;
     gap: 1rem;
 }
+
+.group-btns {
+    display: flex;
+    justify-content: center;
+    gap: 0.2rem;
+}

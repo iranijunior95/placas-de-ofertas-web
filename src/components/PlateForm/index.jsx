@@ -1,6 +1,5 @@
-import { Form } from "react-bootstrap";
+import { Form, Row, Col, Button } from "react-bootstrap";
 import "./style.css";
-import { useEffect } from "react";
 
 function PlateForm(props) {
     function mascaraValor(event) {
@@ -105,6 +104,34 @@ function PlateForm(props) {
                         />
                     )}
                 </Form.Group>
+
+                <Row>
+                    <Col className="group-btns">
+                        <Button 
+                            variant="primary"
+                            size="sm"
+                            onClick={() => props.gerarPDF("a4")}
+                        >
+                            IMPRIMIR A4
+                        </Button>
+
+                        <Button 
+                            variant="primary"
+                            size="sm"
+                            onClick={() => props.gerarPDF([148, 210])}
+                        >
+                            IMPRIMIR A5
+                        </Button>
+
+                        <Button 
+                            variant="primary"
+                            size="sm"
+                            onClick={() => props.gerarPDF([105, 148])}
+                        >
+                            IMPRIMIR A6
+                        </Button>
+                    </Col>
+                </Row>
             </Form>
         </div>
     );
