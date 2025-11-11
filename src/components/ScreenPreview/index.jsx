@@ -15,6 +15,8 @@ function ScreenPreview(props) {
         }
         
     }, [props.descricao, alturaDescricao]);
+
+    console.log(props.preco.replace(/R\$\s?/, "").length)
     
     return (
         <Card className="card-screen-preview">
@@ -31,7 +33,14 @@ function ScreenPreview(props) {
                         {props.descricao === "" ? "descrição da oferta" : props.descricao}
                     </h2>
 
-                    <h3 className="preco">{props.preco === "" ? "0,00" : props.preco.replace(/R\$\s?/, "")}</h3>
+                    <h3 
+                        className="preco"
+                        style={{ 
+                            fontSize: props.preco.replace(/R\$\s?/, "").length >= 7 ? "4.1rem" : "5rem" 
+                        }}
+                    >
+                        {props.preco === "" ? "0,00" : props.preco.replace(/R\$\s?/, "")}
+                    </h3>
 
                     <div 
                         className="rodape"

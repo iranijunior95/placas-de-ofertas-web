@@ -112,23 +112,23 @@ function PlateForm(props) {
                             size="sm"
                             onClick={() => props.gerarPDF("a4")}
                         >
-                            IMPRIMIR A4
+                            IMPRIMIR GRANDE
                         </Button>
 
                         <Button 
                             variant="primary"
                             size="sm"
-                            onClick={() => props.gerarPDF([148, 210])}
+                            onClick={() => props.gerarPDF([130, 180])}
                         >
-                            IMPRIMIR A5
+                            IMPRIMIR MÉDIA
                         </Button>
 
                         <Button 
                             variant="primary"
                             size="sm"
-                            onClick={() => props.gerarPDF([105, 148])}
+                            onClick={() => props.gerarPDF([90, 130])}
                         >
-                            IMPRIMIR A6
+                            IMPRIMIR PEQUENA
                         </Button>
                     </Col>
                 </Row>
