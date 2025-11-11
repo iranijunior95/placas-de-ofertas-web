@@ -16,8 +16,6 @@ function ScreenPreview(props) {
         
     }, [props.descricao, alturaDescricao]);
 
-    console.log(props.preco.replace(/R\$\s?/, "").length)
-    
     return (
         <Card className="card-screen-preview">
             <Card.Body>

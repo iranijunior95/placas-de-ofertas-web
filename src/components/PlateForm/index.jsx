@@ -7,6 +7,8 @@ function PlateForm(props) {
 
         input = input.replace(/\D/g, "");
 
+        if (input > 9999999) return;
+
         const valorNumerico = Number(input) / 100;
         const valorFormatado = valorNumerico.toLocaleString("pt-BR", {
             style: "currency",
